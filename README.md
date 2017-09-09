@@ -1,7 +1,6 @@
 # ci_barcode_generator
 This is a library for codeigniter to read and generate excel document.
 
-<<<<<<< HEAD
 ### How to use
 >First
 ```
