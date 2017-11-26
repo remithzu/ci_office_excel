@@ -1,4 +1,4 @@
-# ci_barcode_generator
+# ci_office_excel
 This is a library for codeigniter to read and generate excel document.
 
 ### How to use
