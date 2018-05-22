@@ -31,7 +31,7 @@ foreach ($objLoad->getWorksheetIterator() as $worksheet) {
 
 >Generate
 ```PHP
-$i=2;
+
 $this->load->library('excel');
 $filename='example.xls'; //save our workbook as this file name
 header('Content-Type: application/vnd.ms-excel'); //mime type
