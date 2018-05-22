@@ -1,6 +1,8 @@
 # ci_office_excel
-This is a library for codeigniter to read and generate excel document.
+This is a library for codeigniter to read and generate excel document from PHPExcel.
 
+### Reverence
+<a href="https://github.com/PHPOffice/PHPExcel">PHPExcel</a>
 ### How to use
 >First
 ```
