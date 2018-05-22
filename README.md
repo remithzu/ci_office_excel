@@ -38,6 +38,7 @@ header('Content-Type: application/vnd.ms-excel'); //mime type
 header('Content-Disposition: attachment;filename="'.$filename.'"'); //tell browser what's the file name
 header('Cache-Control: max-age=0'); //no cache
 
+// Set Header on table
 $this->excel->setActiveSheetIndex(0);
 $this->excel->getActiveSheet()->setTitle('Phone Book');
 $this->excel->getActiveSheet()->setCellValue('A1', 'id');
@@ -52,12 +53,10 @@ $this->excel->getActiveSheet()->setCellValue('C1', 'number');
 $this->excel->getActiveSheet()->getStyle('C1')->getFont()->setBold(true);
 $this->excel->getActiveSheet()->getStyle('C1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 
-foreach ($result as $value) {
-	$this->excel->getActiveSheet()->setCellValue('A'.$i, $value->a);
-	$this->excel->getActiveSheet()->setCellValue('B'.$i, $value->b);
-	$this->excel->getActiveSheet()->setCellValue('C'.$i, $value->c);
-	$i++;
-}
+// write on table
+$this->excel->getActiveSheet()->setCellValue('A2', '1');
+$this->excel->getActiveSheet()->setCellValue('B2', 'George Lovato');
+$this->excel->getActiveSheet()->setCellValue('C2', '21000187');
 
 $this->excel->getProperties()->setCreator("author");
 $this->excel->getProperties()->setLastModifiedBy("author");
